@@ -6,11 +6,6 @@ for file in $FILES
 do 
  cp $file $HOME/output/$1$i
  echo $file
+ pdflatex $HOME/output/$1$i
+ i=i+1
 done
-cd $HOME/output
-FILES=$(find $PWD)
-for file in $FILES
-do
- pdflatex $file
-done
-
